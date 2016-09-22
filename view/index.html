@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <title>EyeQ Optometry</title>
     <link href="../css/style.css" rel="stylesheet">
-    <style>
 
+    <style>
+        /* ABOUT US PAGE */
+        #about-us {
+            width: 100%;
+            height: 800px;
+        }
+        #about-us #right-side {
+            width: 50%;
+            height: 100%;
+            background-attachment: fixed;
+            top: 0;
+            float: left;
+        }
+        #about-us #right-side img {
+            max-width: 100%;
+            height: auto;
+        }
+        #about-us #left-side {
+            width: 50%;
+            height: 100%;
+            background-color: #1D2E40;
+            float: left;
+            padding-top: 80px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #about-us-content {
+            width: 500px;
+            height: 500px;
+            margin: 25px auto;
+        }
+        #about-us-content div {
+            line-height: 25px;
+            font-size: 1.5em;
+        }
     </style>
 </head>
 
 <body>
+    <!--nav bar-->
     <header id="header">
         <div class="content">
             <div id="logo"><img src="../assets/eyeq_logo.png"></div>
@@ -30,7 +65,7 @@
     <div id="home">
         <div id="modal">
             <div id="home-content" class="center off-white-text">
-                <h1>Welcome!</h1>
+                <h1 class="white-text">Welcome!</h1>
                 <p id="welcome-text" class="off-white-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -45,11 +80,27 @@
     </div>
     <!--about us page-->
     <div id="about-us">
-        <div class="left-side">
+            <div id="left-side">
+                <div id="about-us-content">
+                    <h3 class="white-text">ABOUT US</h3>
+                    <div class="white-text">
+                        Dedicated to providing excellence in patient care, clinical education, and optical services, Eye Q Optometry is ready to serve you.
+                        Located in Portland, our doctors are leaders in clinical eye care involving eye and vision disorders.
+                        We provide the highest quality lenses, frames and contact lenses to solve the vision needs of our patients.
+                        Eye Q Optometry’s customers are consistently happy and satisfied with our polite service and timely fashion.
+                        <br><br><br>
+                        Our friendly and warm staff at Eye Q Optometry welcomes you and your family with open arms providing care for the community of all ages.
+                        From a simple check-up to selecting the right pair of glasses, Eye Q Optometry is home to the vision professionals for you.
+                        <br><br><br>
+                        Call us to make an appointment today! We look forward to meeting you and taking care of your vision needs.
+                        Visit our profile page to learn more. (We are walking distance to the well-known brunch café, Screen Door, as well as Whole Foods.)
+                    </div>
+                </div>
+            </div>
 
-        </div>
-        <div class="right-side">
-        </div>
+            <div id="right-side">
+                <img src="../assets/eyeq_shelves.jpg">
+            </div>
     </div>
 </body>
 </html>
