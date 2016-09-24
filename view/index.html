@@ -6,10 +6,12 @@
     <link href="../css/style.css" rel="stylesheet">
 
     <style>
+        /*********WIP**********/
         /* ABOUT US PAGE */
         #about-us {
             width: 100%;
             height: 800px;
+            position: relative;
         }
         #about-us #right-side {
             width: 50%;
@@ -27,9 +29,9 @@
             height: 100%;
             background-color: #1D2E40;
             float: left;
-            padding-top: 80px;
-            display: table-cell;
-            vertical-align: middle;
+            padding-top: 100px;
+            display: flex;
+            align-content: center;
         }
         #about-us-content {
             width: 500px;
@@ -40,6 +42,62 @@
             line-height: 25px;
             font-size: 1.5em;
         }
+        /* PRODUCTS PAGE */
+        #products {
+            width: 100%;
+            height: 850px;
+            padding-top: 150px;
+            background-color: #FFFFFF;
+            position: relative;
+            clear: both;
+        }
+        #products-content {
+            text-align: center;
+        }
+        table {
+            display: flex;
+            justify-content: center;
+        }
+        .brand {
+            width: 300px;
+            height: 200px;
+            margin: 25px 25px 0 25px;
+            background-color: plum;
+        }
+        /* SERVICES PAGE */
+        #services {
+            width: 100%;
+            height: 800px;
+            padding-top: 150px;
+            background-color: #F4F4F4;
+        }
+        #services-content {
+            text-align: center;
+        }
+        .service-box {
+            width: 400px;
+            height: 400px;
+            margin: 25px 25px 0 25px;
+            background-color: cornflowerblue;
+            font-size: 2em;
+        }
+
+        /* TEAM PAGE*/
+        #team {
+            width: 100%;
+            height: 800px;
+            padding-top: 150px;
+            background-color: #FFFFFF;
+        }
+        #team-content {
+            text-align: center;
+        }
+        .team-box {
+            width: 300px;
+            height: 400px;
+            margin: 25px 25px 0 25px;
+            background-color: lightgoldenrodyellow;
+        }
     </style>
 </head>
 
@@ -47,20 +105,20 @@
     <!--nav bar-->
     <header id="header">
         <div class="content">
-            <div id="logo"><img src="../assets/eyeq_logo.png"></div>
+            <div id="logo"><a href="#home"><img src="../assets/eyeq_logo.png"></a></div>
             <nav id="nav">
                 <ul>
                     <li class="active"><a href="#about-us">ABOUT US</a></li>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">OUR TEAM</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#team">OUR TEAM</a></li>
+                    <li><a href="#appointment">CONTACT US</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!--pages-->
+    <!--PAGES-->
     <!--home page-->
     <div id="home">
         <div id="modal">
@@ -80,27 +138,78 @@
     </div>
     <!--about us page-->
     <div id="about-us">
-            <div id="left-side">
-                <div id="about-us-content">
-                    <h3 class="white-text">ABOUT US</h3>
-                    <div class="white-text">
-                        Dedicated to providing excellence in patient care, clinical education, and optical services, Eye Q Optometry is ready to serve you.
-                        Located in Portland, our doctors are leaders in clinical eye care involving eye and vision disorders.
-                        We provide the highest quality lenses, frames and contact lenses to solve the vision needs of our patients.
-                        Eye Q Optometry’s customers are consistently happy and satisfied with our polite service and timely fashion.
-                        <br><br><br>
-                        Our friendly and warm staff at Eye Q Optometry welcomes you and your family with open arms providing care for the community of all ages.
-                        From a simple check-up to selecting the right pair of glasses, Eye Q Optometry is home to the vision professionals for you.
-                        <br><br><br>
-                        Call us to make an appointment today! We look forward to meeting you and taking care of your vision needs.
-                        Visit our profile page to learn more. (We are walking distance to the well-known brunch café, Screen Door, as well as Whole Foods.)
-                    </div>
+        <div id="left-side">
+            <div id="about-us-content">
+                <h3 class="white-text">ABOUT US</h3>
+                <div class="white-text">
+                    Dedicated to providing excellence in patient care, clinical education, and optical services, Eye Q Optometry is ready to serve you.
+                    Located in Portland, our doctors are leaders in clinical eye care involving eye and vision disorders.
+                    We provide the highest quality lenses, frames and contact lenses to solve the vision needs of our patients.
+                    Eye Q Optometry’s customers are consistently happy and satisfied with our polite service and timely fashion.
+                    <br><br><br>
+                    Our friendly and warm staff at Eye Q Optometry welcomes you and your family with open arms providing care for the community of all ages.
+                    From a simple check-up to selecting the right pair of glasses, Eye Q Optometry is home to the vision professionals for you.
+                    <br><br><br>
+                    Call us to make an appointment today! We look forward to meeting you and taking care of your vision needs.
+                    Visit our profile page to learn more. (We are walking distance to the well-known brunch café, Screen Door, as well as Whole Foods.)
                 </div>
             </div>
-
-            <div id="right-side">
-                <img src="../assets/eyeq_shelves.jpg">
-            </div>
+        </div>
+        <div id="right-side">
+            <img src="../assets/eyeq_shelves.jpg">
+        </div>
     </div>
+    <!--products page-->
+    <div id="products">
+        <div id="products-content" class="content center">
+            <h2>WE HAVE QUALITY PRODUCTS</h2>
+            <div class="accent-line center"></div>
+            <table id="brands-table">
+                <tr>
+                    <td><img class="brand"></td>
+                    <td><img class="brand"></td>
+                    <td><img class="brand"></td>
+                </tr>
+                <tr>
+                    <td><img class="brand"></td>
+                    <td><img class="brand"></td>
+                    <td><img class="brand"></td>
+                </tr>
+            </table>
+            <br>
+            <input class="green-btn btn" type="button" value="View all Products">
+        </div>
+    </div>
+    <!--services page-->
+    <div id="services">
+        <div id="services-content" class="content center">
+            <h2>OUR SERVICES</h2>
+            <div class="accent-line center"></div>
+            <table>
+                <tr>
+                    <td><div class="service-box">eye exams</div></td>
+                    <td><div class="service-box">contacts</div></td>
+                    <td><div class="service-box">ophthalmic</div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--team page-->
+    <div id="team">
+        <div id="team-content" class="content center">
+            <h2>OUR TEAM</h2>
+            <div class="accent-line center"></div>
+            <table>
+                <tr>
+                    <td><div class="team-box"></div></td>
+                    <td><div class="team-box"></div></td>
+                    <td><div class="team-box"></div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--testimonials page-->
+    <!--appointment page-->
 </body>
 </html>

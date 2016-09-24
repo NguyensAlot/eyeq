@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    font-size: 10px;
+    font-size: 62.5%;
     background-color: #A1A1A1;
     overflow-x: auto;
 }
@@ -21,6 +21,9 @@ body::-webkit-scrollbar-track {
 h1 {
     font-size: 6em;
     font-weight: 100;
+}
+h2 {
+    font-size: 4em;
 }
 h3 {
     font-size: 3em;
@@ -41,6 +44,35 @@ p {
 .off-white-text {
     color: #B3ADA7;
 }
+.accent-line {
+    width: 300px;
+    border-bottom: 3px solid #57AD68;
+}
+/* BUTTONS */
+
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 25px;
+}
+.green-btn {
+    border: 0px;
+    background-color: #57AD68;
+    color: #E8E8E8;
+}
+.green-btn:active {
+    background-color: #4E9C5D;
+}
+.green-btn-transparent {
+    background: none;
+    border-color: #57AD68;
+    color: #57AD68;
+}
+
 /*NAV BAR STYLE*/
 #header {
     min-width: 1000px;
@@ -85,30 +117,6 @@ p {
 #logo img {
     width: 100%;
     height: 100%;
-}
-/* BUTTONS */
-
-.btn {
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    outline: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    margin: 25px;
-}
-.green-btn {
-    border: 0px;
-    background-color: #57AD68;
-    color: #E8E8E8;
-}
-.green-btn:active {
-    background-color: #4E9C5D;
-}
-.green-btn-transparent {
-    background: none;
-    border-color: #57AD68;
-    color: #57AD68;
 }
 
 /* HOME PAGE */
