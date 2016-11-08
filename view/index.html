@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>EyeQ Optometry</title>
-    <link href="../css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/main.js" type="text/javascript" rel="script"></script>
+    <script src="../scripts/main.js" type="text/javascript" rel="script"></script>
+    <link href="../styles/style.css" rel="stylesheet">
 
     <style>
         /*********WIP**********/
@@ -157,10 +158,28 @@
             font-size: 2em;
         }
 
+        #bottom-nav-strip {
+            height: 40px;
+            background-color: #162534;
+
+        }
     </style>
 </head>
 
 <body>
+    <!--modal for email form-->
+    <div class="modal">
+        <div class="modal-content">
+            <form method="post" name="appt-request" action="email-appt-request.php">
+                <i class="fa fa-times pointer" aria-hidden="true"></i>
+                <input class="stylish-input" name="name" placeholder="Your Name">
+                <input class="stylish-input" name="email" type="email" placeholder="Your Email">
+                <input class="stylish-input" name="phone" placeholder="Phone Number">
+                <textarea class="stylish-input large-text" name="message" placeholder="Reason for Contact"></textarea>
+                <input class="stylish-submit" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
     <!--nav bar-->
     <header id="header">
         <div class="content">
@@ -177,171 +196,172 @@
             </nav>
         </div>
     </header>
-    <div class="scroll-wrapper">
-        <!--PAGES-->
-        <!--home page-->
-        <div id="home">
-            <div id="home-overlay">
-                <div id="home-content" class="center off-white-text">
-                    <h1 class="white-text">Welcome!</h1>
-                    <p id="welcome-text" class="off-white-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <br><br>
-                    <span>
-                        <input class="green-btn btn" type="button" value="Request an Appt">
-                        <a class="smooth-scroll" href="#about-us"><input class="green-btn-transparent btn" type="button" value="Learn More"></a>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!--about us page-->
-        <div id="about-us">
-            <div id="left-side">
-                <div id="about-us-content">
-                    <h3 class="white-text">ABOUT US</h3>
-                    <div class="white-text">
-                        Dedicated to providing excellence in patient care, clinical education, and optical services, Eye Q Optometry is ready to serve you.
-                        Located in Portland, our doctors are leaders in clinical eye care involving eye and vision disorders.
-                        We provide the highest quality lenses, frames and contact lenses to solve the vision needs of our patients.
-                        Eye Q Optometry’s customers are consistently happy and satisfied with our polite service and timely fashion.
-                        <br><br><br>
-                        Our friendly and warm staff at Eye Q Optometry welcomes you and your family with open arms providing care for the community of all ages.
-                        From a simple check-up to selecting the right pair of glasses, Eye Q Optometry is home to the vision professionals for you.
-                        <!--
-                        <br><br><br>
-                        Call us to make an appointment today! We look forward to meeting you and taking care of your vision needs.
-                        Visit our profile page to learn more. (We are walking distance to the well-known brunch café, Screen Door, as well as Whole Foods.)
-                        -->
-                    </div>
-                </div>
-            </div>
-            <div id="right-side">
-                <img src="../assets/eyeq_shelves.jpg">
-            </div>
-        </div>
-        <!--products page-->
-        <div id="products">
-            <div id="products-content" class="content center">
-                <h2>WE HAVE QUALITY <b>PRODUCTS</b></h2>
-                <div class="accent-line center"></div>
-                <table id="brands-table">
-                    <tr>
-                        <td><img src="../assets/products/marc_jacobs_icon.png" class="brand"></td>
-                        <td><img src="../assets/products/dolce_gabbana_icon.png" class="brand"></td>
-                        <td><img src="../assets/products/gucci_icon.png" class="brand"></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../assets/products/rayban_icon.png" class="brand"></td>
-                        <td><img src="../assets/products/tom_ford_icon.png" class="brand"></td>
-                        <td><img src="../assets/products/persol_icon.png" class="brand"></td>
-                    </tr>
-                </table>
-                <br>
-                <input class="green-btn btn" type="button" value="View all Products">
-            </div>
-        </div>
-        <!--services page-->
-        <div id="services">
-            <div id="services-content" class="content center">
-                <h2>OUR <b>SERVICES</b></h2>
-                <div class="accent-line center"></div>
-                <p class="description-text">
-                    Eye Q Optometry is a primary care practice.  We perform routine eye exams for children and adults of all ages.
+    <!--PAGES-->
+    <!--home page-->
+    <div id="home">
+        <div id="home-overlay">
+            <div id="home-content" class="center off-white-text">
+                <h1 class="white-text">Welcome!</h1>
+                <p id="welcome-text" class="off-white-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <table>
-                    <tr>
-                        <td>
-                            <div class="service-box">
-                                <img src="../assets/services/eye_exam_icon.PNG">
-                                <br>
-                                <div class="off-black-text">Comprehensive Eye Exams</div>
-                                <br>
-                                <div class="description-text service-description-text">
-                                    Comprehensive eye exams include refraction for eyeglasses and a thorough evaluation of the health of your eyes.
-                                    Screenings are conducted to detect eye diseases in its early stages so that a treatment plan can be established before the condition worsens.
-                                    We check for glaucoma, conducts cataract evaluations, diagnose and treat ocular diseases.
-                                    Routine examinations can detect systemic diseases - – patients who have diabetes and/or high blood pressure, if not controlled, can lead to vision loss.
-                                    It is important to get your eye examined.
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="service-box">
-                                <img src="../assets/services/contacts_icon.PNG">
-                                <br>
-                                <div class="off-black-text">Contact Lens Fitting</div>
-                                <br>
-                                <div class="description-text service-description-text">
-                                    We fit patients with astigmatism, dry eye and multifocal prescriptions.
-                                    Contact lenses are an excellent alternative to wearing glasses should you need to take a break.
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="service-box">
-                                <img src="../assets/services/ophthalmic_icon.png">
-                                <br>
-                                <div class="off-black-text">Ophthalmic Services</div>
-                                <br>
-                                <div class="description-text service-description-text">
-
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <br><br>
+                <span>
+                    <input class="green-btn btn appt" type="button" value="Request an Appt">
+                    <a class="smooth-scroll" href="#about-us"><input class="green-btn-transparent btn" type="button" value="Learn More"></a>
+                </span>
             </div>
         </div>
-        <!--team page-->
-        <div id="team">
-            <div id="team-content" class="content center">
-                <h2>OUR <b>TEAM</b></h2>
-                <div class="accent-line center"></div>
-                <table>
-                    <tr>
-                        <td>
-                            <div class="team-box">
-                                <br>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <!--testimonials page-->
-        <div id="testimonials">
-            <div id="testimonials-content" class="content center">
-                <h2>CLIENTS <b>TESTIMONIALS</b></h2>
-                <div class="accent-line center"></div>
-
-
-            </div>
-        </div>
-        <!--appointment page-->
-        <div id="appointment">
-            <div id="appointment-overlay">
-                <div id="appointment-content">
-                    <h2 class="white-text">LET'S SCHEDULE AN <b>APPOINTMENT</b></h2>
-                    <div class="accent-line center"></div>
-                    <input type="button" class="green-btn btn" value="Request an Appt">
+    </div>
+    <!--about us page-->
+    <div id="about-us">
+        <div id="left-side">
+            <div id="about-us-content">
+                <h3 class="white-text">ABOUT US</h3>
+                <div class="white-text">
+                    Dedicated to providing excellence in patient care, clinical education, and optical services, Eye Q Optometry is ready to serve you.
+                    Located in Portland, our doctors are leaders in clinical eye care involving eye and vision disorders.
+                    We provide the highest quality lenses, frames and contact lenses to solve the vision needs of our patients.
+                    Eye Q Optometry’s customers are consistently happy and satisfied with our polite service and timely fashion.
+                    <br><br><br>
+                    Our friendly and warm staff at Eye Q Optometry welcomes you and your family with open arms providing care for the community of all ages.
+                    From a simple check-up to selecting the right pair of glasses, Eye Q Optometry is home to the vision professionals for you.
+                    <!--
+                    <br><br><br>
+                    Call us to make an appointment today! We look forward to meeting you and taking care of your vision needs.
+                    Visit our profile page to learn more. (We are walking distance to the well-known brunch café, Screen Door, as well as Whole Foods.)
+                    -->
                 </div>
             </div>
         </div>
-        <div id="bottom-nav">
-            <div id="bottom-nav-content">
-                <img src="../assets/eyeq_logo_white.png">
-                <table>
-                    <tr>
-                        <td><div class="info-box white-text">ABOUT US</div></td>
-                        <td><div class="info-box white-text">PRODUCTS</div></td>
-                        <td><div class="info-box white-text">CONTACT US</div></td>
-                        <td><div class="info-box white-text">SUBSCRIBE</div></td>
-                    </tr>
-                </table>
+        <div id="right-side">
+            <img src="../assets/eyeq_shelves.jpg">
+        </div>
+    </div>
+    <!--products page-->
+    <div id="products">
+        <div id="products-content" class="content center">
+            <h2>WE HAVE QUALITY <b>PRODUCTS</b></h2>
+            <div class="accent-line center"></div>
+            <table id="brands-table">
+                <tr>
+                    <td><img src="../assets/products/marc_jacobs_icon.png" class="brand"></td>
+                    <td><img src="../assets/products/dolce_gabbana_icon.png" class="brand"></td>
+                    <td><img src="../assets/products/gucci_icon.png" class="brand"></td>
+                </tr>
+                <tr>
+                    <td><img src="../assets/products/rayban_icon.png" class="brand"></td>
+                    <td><img src="../assets/products/tom_ford_icon.png" class="brand"></td>
+                    <td><img src="../assets/products/persol_icon.png" class="brand"></td>
+                </tr>
+            </table>
+            <br>
+            <input class="green-btn btn" type="button" value="View all Products">
+        </div>
+    </div>
+    <!--services page-->
+    <div id="services">
+        <div id="services-content" class="content center">
+            <h2>OUR <b>SERVICES</b></h2>
+            <div class="accent-line center"></div>
+            <p class="description-text">
+                Eye Q Optometry is a primary care practice.  We perform routine eye exams for children and adults of all ages.
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <div class="service-box">
+                            <img src="../assets/services/eye_exam_icon.PNG">
+                            <br>
+                            <div class="off-black-text">Comprehensive Eye Exams</div>
+                            <br>
+                            <div class="description-text service-description-text">
+                                Comprehensive eye exams include refraction for eyeglasses and a thorough evaluation of the health of your eyes.
+                                Screenings are conducted to detect eye diseases in its early stages so that a treatment plan can be established before the condition worsens.
+                                We check for glaucoma, conducts cataract evaluations, diagnose and treat ocular diseases.
+                                Routine examinations can detect systemic diseases - – patients who have diabetes and/or high blood pressure, if not controlled, can lead to vision loss.
+                                It is important to get your eye examined.
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="service-box">
+                            <img src="../assets/services/contacts_icon.PNG">
+                            <br>
+                            <div class="off-black-text">Contact Lens Fitting</div>
+                            <br>
+                            <div class="description-text service-description-text">
+                                We fit patients with astigmatism, dry eye and multifocal prescriptions.
+                                Contact lenses are an excellent alternative to wearing glasses should you need to take a break.
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="service-box">
+                            <img src="../assets/services/ophthalmic_icon.png">
+                            <br>
+                            <div class="off-black-text">Ophthalmic Services</div>
+                            <br>
+                            <div class="description-text service-description-text">
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--team page-->
+    <div id="team">
+        <div id="team-content" class="content center">
+            <h2>OUR <b>TEAM</b></h2>
+            <div class="accent-line center"></div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="team-box">
+                            <br>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--testimonials page-->
+    <div id="testimonials">
+        <div id="testimonials-content" class="content center">
+            <h2>CLIENTS <b>TESTIMONIALS</b></h2>
+            <div class="accent-line center"></div>
+
+
+        </div>
+    </div>
+    <!--appointment page-->
+    <div id="appointment">
+        <div id="appointment-overlay">
+            <div id="appointment-content">
+                <h2 class="white-text">LET'S SCHEDULE AN <b>APPOINTMENT</b></h2>
+                <div class="accent-line center"></div>
+                <input type="button" class="green-btn btn appt" value="Request an Appt">
             </div>
         </div>
+    </div>
+    <div id="bottom-nav">
+        <div id="bottom-nav-content">
+            <img src="../assets/eyeq_logo_white.png">
+            <table>
+                <tr>
+                    <td><div class="info-box white-text">ABOUT US</div></td>
+                    <td><div class="info-box white-text">PRODUCTS</div></td>
+                    <td><div class="info-box white-text">CONTACT US</div></td>
+                    <td><div class="info-box white-text">SUBSCRIBE</div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="bottom-nav-strip" >
+            <span class="white-text">Copyright 2016 eye Q</span>
     </div>
 </body>
 </html>
