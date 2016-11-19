@@ -81,6 +81,10 @@
         #services-content {
             text-align: center;
         }
+        .service-wrapper {
+            display: flex;
+            justify-content: center;
+        }
         .service-box {
             width: 400px;
             height: 400px;
@@ -268,11 +272,9 @@
             <p class="description-text">
                 Eye Q Optometry is a primary care practice.  We perform routine eye exams for children and adults of all ages.
             </p>
-            <table>
-                <tr>
-                    <td>
+            <div class="service-wrapper">
                         <div class="service-box">
-                            <img src="../assets/services/eye_exam_icon.PNG">
+                            <img src="../assets/services/eye_exam_icon.png">
                             <br>
                             <div class="off-black-text">Comprehensive Eye Exams</div>
                             <br>
@@ -287,7 +289,7 @@
                     </td>
                     <td>
                         <div class="service-box">
-                            <img src="../assets/services/contacts_icon.PNG">
+                            <img src="../assets/services/contacts_icon.png">
                             <br>
                             <div class="off-black-text">Contact Lens Fitting</div>
                             <br>
@@ -307,9 +309,7 @@
 
                             </div>
                         </div>
-                    </td>
-                </tr>
-            </table>
+            </div>
         </div>
     </div>
     <!--team page-->
@@ -317,15 +317,6 @@
         <div id="team-content" class="content center">
             <h2>OUR <b>TEAM</b></h2>
             <div class="accent-line center"></div>
-            <table>
-                <tr>
-                    <td>
-                        <div class="team-box">
-                            <br>
-                        </div>
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
     <!--testimonials page-->
@@ -333,8 +324,6 @@
         <div id="testimonials-content" class="content center">
             <h2>CLIENTS <b>TESTIMONIALS</b></h2>
             <div class="accent-line center"></div>
-
-
         </div>
     </div>
     <!--appointment page-->
@@ -361,7 +350,7 @@
         </div>
     </div>
     <div id="bottom-nav-strip" >
-            <span class="white-text">Copyright 2016 eye Q</span>
+        <span class="white-text">Copyright 2016 eye Q</span>
     </div>
 </body>
 </html>
