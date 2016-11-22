@@ -21,6 +21,7 @@ function addEventListeners() {
     for (var i = 0; i < elementsByClass.length; i++) {
         elementsByClass[i].addEventListener('click', setPActive, false);
     }
+    document.getElementsByClassName('pagination')[0].addEventListener('click', setPActive, false);
 }
 
 function enableSmoothScroll() {
@@ -45,9 +46,20 @@ function enableSmoothScroll() {
 }
 
 function setPActive(event) {
-    var active = event.target;
-    
-    
+    changeVerbiage();
+    changePBullet();
+    i++;
+}
+
+// change this
+var i = 0;
+function changePBullet() {
+    $('.p-bullets').eq((i+1) % 2).addClass('pagination-active');
+    $('.p-bullets').eq(i % 2).removeClass('pagination-active');
+}
+function changeVerbiage() {
+    $('.about-us-verbiage').eq((i+1) % 2).removeClass('pagination-hidden');
+    $('.about-us-verbiage').eq(i % 2).addClass('pagination-hidden');
 }
 
 function sendEmail() {
