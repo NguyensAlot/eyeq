@@ -9,13 +9,17 @@ $(document).ready(function() {
 })
 
 function addEventListeners() {
-    var apptBtns = document.getElementsByClassName('appt');
-    for (var i = 0; i < apptBtns.length; i++) {
-        apptBtns[i].addEventListener('click', sendEmail, false);
+    var elementsByClass = document.getElementsByClassName('appt');
+    for (var i = 0; i < elementsByClass.length; i++) {
+        elementsByClass[i].addEventListener('click', sendEmail, false);
     }
-    var modals = document.getElementsByClassName('fa-times');
-    for (var i = 0; i < modals.length; i++) {
-        modals[i].addEventListener('click', closeModal, false);
+    elementsByClass = document.getElementsByClassName('fa-times');
+    for (var i = 0; i < elementsByClass.length; i++) {
+        elementsByClass[i].addEventListener('click', closeModal, false);
+    }
+    elementsByClass = document.getElementsByClassName('p-bullets');
+    for (var i = 0; i < elementsByClass.length; i++) {
+        elementsByClass[i].addEventListener('click', setPActive, false);
     }
 }
 
@@ -38,6 +42,12 @@ function enableSmoothScroll() {
             })
         }
     })
+}
+
+function setPActive(event) {
+    var active = event.target;
+    
+    
 }
 
 function sendEmail() {
