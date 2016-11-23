@@ -90,13 +90,15 @@ input::-moz-placeholder {
     justify-content: center;
 }
 .modal-content {
-    width: 500px;
-    height: 450px;
+    width: 450px;
+    height: 500px;
     border-radius: 25px;
     background-color: lightgray;
     display: none;
+    padding: 0 30px;
     font-size: 3em;
 }
+
 .stylish-input {
     width: 400px;
     height: 25px;
@@ -107,7 +109,7 @@ input::-moz-placeholder {
     padding-left: 5px;
     transition: 500ms all ease;
     border: 1px solid #333;
-    margin: 20px 20px 0 20px;
+    margin: 30px 20px 0 20px;
 }
 .stylish-input:focus {
     outline: none;
@@ -146,7 +148,7 @@ input::-moz-placeholder {
     height: 50px;
     border-radius: 20px;
     outline: none;
-    margin: 10px;
+    margin: 10px 20px;
 }
 .green-btn {
     border: 0px;
