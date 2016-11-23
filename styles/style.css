@@ -61,7 +61,7 @@ input::-moz-placeholder {
 }
 
 .inline {
-    display: inline;
+    display: inline-block;
 }
 .white-text {
     color: #FFFFFF;
@@ -91,22 +91,31 @@ input::-moz-placeholder {
 }
 .modal-content {
     width: 500px;
-    height: 400px;
+    height: 450px;
     border-radius: 25px;
-    background-color: white;
+    background-color: lightgray;
     display: none;
     font-size: 3em;
 }
 .stylish-input {
     width: 400px;
-    margin: 20px 20px 0 20px;
-    border: 1px solid;
-    border-radius: 10px;
+    height: 25px;
     text-decoration: none;
-    text-indent: 10px;
+    background: #333;
+    color: #ccc;
+    font-size: .5em;
+    padding-left: 5px;
+    transition: 500ms all ease;
+    border: 1px solid #333;
+    margin: 20px 20px 0 20px;
 }
 .stylish-input:focus {
     outline: none;
+    box-shadow: 12px 13px 0px rgba(204, 211, 51, 0.38),
+                -11px -14px 0px rgba(241, 96, 0, 0.28),
+                18px -24px 0px rgba(0, 0, 0, 0.34),
+                33px -6px 0px rgba(39, 74, 214, 0.28);
+    
 }
 .stylish-submit {
 }
@@ -118,7 +127,9 @@ input::-moz-placeholder {
     margin: 15px 20px 0 20px;
     float: right;
 }
-
+.pos-right {
+    float: right;
+}
 
 /* BUTTONS */
 .btn {
@@ -129,6 +140,13 @@ input::-moz-placeholder {
     cursor: pointer;
     font-size: 1.5em;
     margin: 25px;
+}
+.btn-sm {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    margin: 10px;
 }
 .green-btn {
     border: 0px;

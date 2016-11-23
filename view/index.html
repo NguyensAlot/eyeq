@@ -92,7 +92,8 @@
             width: 100%;
             height: 500px;
             background-color: #1D2E40;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
         #bottom-nav-content img {
             width: 200px;
@@ -119,10 +120,13 @@
             <form method="post" name="appt-request" action="email-appt-request.php">
                 <i class="fa fa-times pointer" aria-hidden="true"></i>
                 <input class="stylish-input" name="name" placeholder="Your Name">
+                <br>
                 <input class="stylish-input" name="email" type="email" placeholder="Your Email">
+                <br>
                 <input class="stylish-input" name="phone" placeholder="Phone Number">
+                <br>
                 <textarea class="stylish-input large-text" name="message" placeholder="Reason for Contact"></textarea>
-                <input class="stylish-submit" type="submit" value="Send">
+                <input class="btn-sm green-btn-transparent pos-right" type="submit" value="Send">
             </form>
         </div>
     </div>
@@ -279,14 +283,12 @@
     <div id="bottom-nav">
         <div id="bottom-nav-content">
             <img src="../assets/eyeq_logo_white.png">
-            <table>
-                <tr>
-                    <td><div class="info-box white-text">ABOUT US</div></td>
-                    <td><div class="info-box white-text">PRODUCTS</div></td>
-                    <td><div class="info-box white-text">CONTACT US</div></td>
-                    <td><div class="info-box white-text">SUBSCRIBE</div></td>
-                </tr>
-            </table>
+            <div class="">
+                <div class="info-box white-text">ABOUT US</div>
+                <div class="info-box white-text">PRODUCTS</div>
+                <div class="info-box white-text">CONTACT US</div>
+                <div class="info-box white-text">SUBSCRIBE</div>
+            </div>
         </div>
     </div>
     <div id="bottom-nav-strip" >
