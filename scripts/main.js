@@ -17,10 +17,10 @@ function addEventListeners() {
     for (var i = 0; i < elementsByClass.length; i++) {
         elementsByClass[i].addEventListener('click', closeModal, false);
     }
-    elementsByClass = document.getElementsByClassName('p-bullets');
-    for (var i = 0; i < elementsByClass.length; i++) {
-        elementsByClass[i].addEventListener('click', setPActive, false);
-    }
+    // elementsByClass = document.getElementsByClassName('p-bullets');
+    // for (var i = 0; i < elementsByClass.length; i++) {
+    //     elementsByClass[i].addEventListener('click', setPActive, false);
+    // }
     document.getElementsByClassName('pagination')[0].addEventListener('click', setPActive, false);
 }
 
@@ -53,13 +53,17 @@ function setPActive(event) {
 
 // change this
 var i = 0;
+var numOfPages = 2;
+// add to one, remove from all
 function changePBullet() {
-    $('.p-bullets').eq((i+1) % 2).addClass('pagination-active');
-    $('.p-bullets').eq(i % 2).removeClass('pagination-active');
+    $('.p-bullets').removeClass('pagination-active');
+    $('.p-bullets').eq((i+1) % numOfPages).addClass('pagination-active');
 }
+
+// in this case -- add to all, remove from one
 function changeVerbiage() {
-    $('.about-us-verbiage').eq((i+1) % 2).removeClass('pagination-hidden');
-    $('.about-us-verbiage').eq(i % 2).addClass('pagination-hidden');
+    $('.about-us-verbiage').addClass('pagination-hidden');
+    $('.about-us-verbiage').eq((i+1) % numOfPages).removeClass('pagination-hidden');
 }
 
 function sendEmail() {
