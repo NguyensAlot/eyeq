@@ -60,6 +60,9 @@ input::-moz-placeholder {
     cursor: pointer;
 }
 
+.inline {
+    display: inline;
+}
 .white-text {
     color: #FFFFFF;
 }
@@ -202,9 +205,8 @@ input::-moz-placeholder {
     margin: 0;
     padding: 200px 0 260px 0;
 }
-#home #home-overlay {
+.home-overlay {
     background-color: rgba(0, 0, 0, 0.5);
-    min-width: 1440px;
     width: 100%;
     height: 1210px;
     position: absolute;
