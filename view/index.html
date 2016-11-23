@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>EyeQ Optometry</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
@@ -11,8 +12,6 @@
 
     <style>
         /*********WIP**********/
-        
-        
         /* SERVICES PAGE */
         #services {
             width: 100%;
@@ -22,6 +21,8 @@
         }
         #services-content {
             text-align: center;
+            height: 90%;
+            background-color: #F4F4F4;
         }
         .service-wrapper {
             display: flex;
@@ -87,24 +88,26 @@
         #appointment-content {
             text-align: center;
         }
-
         #bottom-nav {
             width: 100%;
             height: 500px;
             background-color: #1D2E40;
             display: flex;
             justify-content: center;
+            align-content: flex-start;
         }
-        #bottom-nav-content img {
+        
+        #bottom-nav img {
             width: 200px;
             height: 100px;
             margin-top: 50px;
         }
         .info-box {
+            width: 200px;
             margin: 10px 40px 0 40px;
             font-size: 2em;
+            display: inline-block;
         }
-
         #bottom-nav-strip {
             height: 40px;
             background-color: #162534;
@@ -281,18 +284,42 @@
         </div>
     </div>
     <div id="bottom-nav">
-        <div id="bottom-nav-content">
             <img src="../assets/eyeq_logo_white.png">
             <div class="">
-                <div class="info-box white-text">ABOUT US</div>
-                <div class="info-box white-text">PRODUCTS</div>
-                <div class="info-box white-text">CONTACT US</div>
-                <div class="info-box white-text">SUBSCRIBE</div>
+                <div class="info-box white-text">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li>Mission Statement</li>
+                        <li>Meet the Team</li>
+                    </ul>
+                </div>
+                <div class="info-box white-text">
+                    <h4>PRODUCTS</h4>
+                    <ul>
+                        <li>Product List</li>
+                        <li>Order Requests</li>
+                    </ul>
+                </div>
+                <div class="info-box white-text">
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li>Popular photos</li>
+                        <li>High definition wallpapers</li>
+                        <li>Photo license</li>
+                        <li>lorem ipsum</li>
+                        <li>some sample text</li>
+                    </ul>
+                </div>
+                <div class="info-box white-text">
+                    <h4>SUBSCRIBE</h4>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiusmod tempor incididunt ut labore.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
     </div>
     <div id="bottom-nav-strip" >
-        <span class="white-text">Copyright 2016 eye Q</span>
+        <span class="white-text pos-right">Copyright 2016 eye Q</span>
     </div>
 </body>
 </html>
