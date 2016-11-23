@@ -93,8 +93,8 @@
             height: 500px;
             background-color: #1D2E40;
             display: flex;
-            justify-content: center;
-            align-content: flex-start;
+            flex-direction: column;
+            align-items: center;
         }
         
         #bottom-nav img {
@@ -102,16 +102,22 @@
             height: 100px;
             margin-top: 50px;
         }
+        .info-box-wrapper {
+            display: flex;
+            align-items: flex-start;
+        }
         .info-box {
             width: 200px;
             margin: 10px 40px 0 40px;
             font-size: 2em;
-            display: inline-block;
+        }
+        .info-box li {
+            font-size: .75em;
+            line-height: 25px;
         }
         #bottom-nav-strip {
             height: 40px;
             background-color: #162534;
-
         }
     </style>
 </head>
@@ -160,7 +166,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <br><br>
-                <div class="inline">
+                <div class="">
                     <input class="green-btn btn appt" type="button" value="Request an Appt">
                     <a class="smooth-scroll" href="#about-us"><input class="green-btn-transparent btn" type="button" value="Learn More"></a>
                 </div>
@@ -223,7 +229,6 @@
                 Eye Q Optometry is a primary care practice.  We perform routine eye exams for children and adults of all ages.
                 <br>
                 Routine examinations can detect systemic diseases - - patients who have diabetes and/or high blood pressure, if not controlled, can lead to vision loss.
-                
             </p>
             <div class="service-wrapper">
                 <div class="service-box">
@@ -285,7 +290,7 @@
     </div>
     <div id="bottom-nav">
             <img src="../assets/eyeq_logo_white.png">
-            <div class="">
+            <div class="info-box-wrapper">
                 <div class="info-box white-text">
                     <h4>ABOUT US</h4>
                     <ul>

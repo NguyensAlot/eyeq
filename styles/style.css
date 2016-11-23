@@ -38,6 +38,7 @@ b {
 }
 ul {
     list-style: none;
+    padding: 0;
 }
 input::-webkit-input-placeholder {
     font-family: "Roboto", sans-serif;
@@ -61,10 +62,6 @@ input::-moz-placeholder {
 }
 .pointer {
     cursor: pointer;
-}
-
-.inline {
-    display: inline-block;
 }
 .white-text {
     color: #FFFFFF;
@@ -101,7 +98,6 @@ input::-moz-placeholder {
     padding: 0 30px;
     font-size: 3em;
 }
-
 .stylish-input {
     width: 400px;
     height: 25px;
@@ -122,10 +118,6 @@ input::-moz-placeholder {
                 33px -6px 0px rgba(39, 74, 214, 0.28);
     
 }
-
-.stylish-submit {
-}
-
 .large-text {
     height: 150px;
 }
@@ -190,8 +182,7 @@ input::-moz-placeholder {
 }
 
 #nav ul {
-    margin: 0 auto;
-    line-height: 60px;
+    line-height: 40px;
 }
 #nav li {
     display: inline;
@@ -272,6 +263,7 @@ input::-moz-placeholder {
     width: 500px;
     height: 500px;
     margin: 25px auto;
+    padding: 0 10px;
 }
 
 .about-us-verbiage {
