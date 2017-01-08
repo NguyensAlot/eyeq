@@ -11,7 +11,6 @@
     <link href="../styles/style.css" rel="stylesheet">
 
     <style>
-        /*********WIP**********/
         /* SERVICES PAGE */
         #services {
             width: 100%;
@@ -97,11 +96,12 @@
             align-items: center;
         }
         
-        #bottom-nav img {
+        .bot-nav-logo {
             width: 200px;
             height: 100px;
             margin-top: 50px;
         }
+
         .info-box-wrapper {
             display: flex;
             align-items: flex-start;
@@ -118,6 +118,14 @@
         #bottom-nav-strip {
             height: 40px;
             background-color: #162534;
+        }
+        .bot-nav-icons {
+            display: flex;
+            flex-direction: row;
+        }
+        .bot-nav-icons li a img {
+            width: 40px;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -148,8 +156,9 @@
                     <li><a class="smooth-scroll" href="#about-us">ABOUT US</a></li>
                     <li><a class="smooth-scroll" href="#products">PRODUCTS</a></li>
                     <li><a class="smooth-scroll" href="#services">SERVICES</a></li>
+                    <!--TODO
                     <li><a class="smooth-scroll" href="#team">OUR TEAM</a></li>
-                    <li><a class="smooth-scroll" href="#testimonials">TESTIMONIALS</a></li>
+                    <li><a class="smooth-scroll" href="#testimonials">TESTIMONIALS</a></li>-->
                     <li><a class="smooth-scroll" href="#appointment">CONTACT US</a></li>
                 </ul>
             </nav>
@@ -217,7 +226,8 @@
                 <img src="../assets/products/persol_icon.png" class="brand">
             </div>
             <br>
-            <input class="green-btn btn" type="button" value="View all Products">
+            <!--TODO
+            <input class="green-btn btn" type="button" value="View all Products">-->
         </div>
     </div>
     <!--services page-->
@@ -258,26 +268,27 @@
                     <br>
                     <div class="off-black-text">Ophthalmic Services</div>
                     <br>
-                    <div class="description-text service-description-text"
+                    <div class="description-text service-description-text">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--team page-->
+<!--TODO
+    &lt;!&ndash;team page&ndash;&gt;
     <div id="team">
         <div id="team-content" class="content center">
             <h2>OUR <b>TEAM</b></h2>
             <div class="accent-line center"></div>
         </div>
     </div>
-    <!--testimonials page-->
+    &lt;!&ndash;testimonials page&ndash;&gt;
     <div id="testimonials">
         <div id="testimonials-content" class="content center">
             <h2>CLIENTS <b>TESTIMONIALS</b></h2>
             <div class="accent-line center"></div>
         </div>
-    </div>
+    </div>-->
     <!--appointment page-->
     <div id="appointment">
         <div id="appointment-overlay">
@@ -289,7 +300,7 @@
         </div>
     </div>
     <div id="bottom-nav">
-            <img src="../assets/eyeq_logo_white.png">
+            <img class="bot-nav-logo" src="../assets/eyeq_logo_white.png">
             <div class="info-box-wrapper">
                 <div class="info-box white-text">
                     <h4>ABOUT US</h4>
@@ -308,17 +319,21 @@
                 <div class="info-box white-text">
                     <h4>CONTACT US</h4>
                     <ul>
-                        <li>Popular photos</li>
-                        <li>High definition wallpapers</li>
-                        <li>Photo license</li>
-                        <li>lorem ipsum</li>
-                        <li>some sample text</li>
+                        <li><a href="https://www.google.com/maps/place/2460+E+Burnside+St,+Portland,+OR+97214/@45.5226392,-122.6424904,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a0bebbe8c869:0xca1722c328a7603d!8m2!3d45.5226392!4d-122.6403017" target="_blank">
+                            2460 E Burnside St., Portland, Oregon 97214
+                        </a></li>
+                        <li>T: 503.232.1958</li>
+                        <li>F: 503.232.1941</li>
+                        <li>info@eyeqpdx.com</li>
                     </ul>
                 </div>
                 <div class="info-box white-text">
                     <h4>SUBSCRIBE</h4>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiusmod tempor incididunt ut labore.</li>
+                    <ul class="bot-nav-icons">
+                        <li><a href="https://www.facebook.com/eyeQpdx/" target="_blank"><img src="../assets/subscribe/facebook_icon.png"></a></li>
+                        <li><a href="https://www.instagram.com/eyeqpdx/" target="_blank"><img src="../assets/subscribe/instagram_icon.png"></a></li>
+                        <li><a href="https://twitter.com/eyeqpdx" target="_blank"><img src="../assets/subscribe/twitter_icon.png"></a></li>
+                        <li><a href="https://www.yelp.com/biz/eyeq-optometry-portland" target="_blank"><img src="../assets/subscribe/yelp_icon.png"></a></li>
                     </ul>
                 </div>
             </div>
